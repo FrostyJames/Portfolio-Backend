@@ -36,4 +36,4 @@ RUN mkdir -p \
 EXPOSE 10000
 
 # Run migrations, then start Laravel
-CMD ["sh", "-c", "php artisan migrate --force && php artisan serve --host=0.0.0.0 --port=${PORT:-10000}"]
+CMD ["sh", "-c", "php artisan migrate --force && php artisan db:seed --class=ProjectSeeder && php artisan serve --host=0.0.0.0 --port=${PORT:-10000}"]
