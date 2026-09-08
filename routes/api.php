@@ -14,4 +14,4 @@ Route::get('/test-email', function () {
     Mail::to('ivanlavan773@gmail.com')->send(new TestEmail());
 
     return 'Test email sent.';
-});3
+});
